@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="DBEntities">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="DBModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Name2" ColumnName="Name2" />
+          <ScalarProperty Name="EnrollmentDate" ColumnName="EnrollmentDate" />
+          <ScalarProperty Name="LeavingDate" ColumnName="LeavingDate" />
+          <ScalarProperty Name="EmployeeTag1" ColumnName="EmployeeTag1" />
+          <ScalarProperty Name="EmployeeTag2" ColumnName="EmployeeTag2" />
+          <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+          <ScalarProperty Name="IsAgent" ColumnName="IsAgent" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="EmployeeType1" ColumnName="EmployeeType1" />
+          <ScalarProperty Name="EmployeeType2" ColumnName="EmployeeType2" />
+          <ScalarProperty Name="EmployeeType3" ColumnName="EmployeeType3" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Productivity" ColumnName="Productivity" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LaborRuleId" ColumnName="LaborRuleId" />
+          <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+          <ScalarProperty Name="CertificationId" ColumnName="CertificationId" />
+          <ScalarProperty Name="OnDutyDate" ColumnName="OnDutyDate" />
+          <ScalarProperty Name="HomePhone1" ColumnName="HomePhone1" />
+          <ScalarProperty Name="HomePhone2" ColumnName="HomePhone2" />
+          <ScalarProperty Name="IsCanWorked" ColumnName="IsCanWorked" />
+          <ScalarProperty Name="SwapGroupId" ColumnName="SwapGroupId" />
+          <ScalarProperty Name="OffDuteGroupId" ColumnName="OffDuteGroupId" />
+          <ScalarProperty Name="TimeOffGroupId" ColumnName="TimeOffGroupId" />
+          <ScalarProperty Name="BiddingGroupId" ColumnName="BiddingGroupId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Announcement_Org">
+      <EntityTypeMapping TypeName="DBModel.Announcement_Org">
+        <MappingFragment StoreEntitySet="Announcement_Org">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="AnnounceTimeEnd" ColumnName="AnnounceTimeEnd" />
+          <ScalarProperty Name="AnnounceTimeStart" ColumnName="AnnounceTimeStart" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ContentText" ColumnName="ContentText" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ReceiverOrgId" ColumnName="ReceiverOrgId" />
+          <ScalarProperty Name="PosterId" ColumnName="PosterId" />
+          <ScalarProperty Name="Poster" ColumnName="Poster" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="AnnounceId" ColumnName="AnnounceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,264 @@
+﻿@model AspNetMvc5_V1.Models.Employee
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollmentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnrollmentDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeavingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeavingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeTag1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeTag1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeTag2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeTag2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AgentId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgentId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAgent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsAgent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeType1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeType1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeType2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeType2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeType3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeType3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Language)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Language)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Productivity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Productivity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LaborRuleId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LaborRuleId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CertificationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CertificationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OnDutyDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OnDutyDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomePhone1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomePhone1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomePhone2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomePhone2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsCanWorked)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsCanWorked)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SwapGroupId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SwapGroupId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OffDuteGroupId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OffDuteGroupId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOffGroupId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOffGroupId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BiddingGroupId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BiddingGroupId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

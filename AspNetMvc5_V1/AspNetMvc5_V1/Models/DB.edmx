@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Announcement_Org">
+          <Key>
+            <PropertyRef Name="AnnounceId" />
+          </Key>
+          <Property Name="AnnounceId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PostTime" Type="datetime" Nullable="false" />
+          <Property Name="Poster" Type="nvarchar" MaxLength="510" Nullable="false" />
+          <Property Name="PosterId" Type="uniqueidentifier" />
+          <Property Name="ReceiverOrgId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ContentText" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Tag" Type="nvarchar" MaxLength="50" />
+          <Property Name="Priority" Type="bit" />
+          <Property Name="AnnounceTimeStart" Type="datetime" Nullable="false" />
+          <Property Name="AnnounceTimeEnd" Type="datetime" Nullable="false" />
+          <Property Name="ContentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Name2" Type="nvarchar" MaxLength="255" />
+          <Property Name="EnrollmentDate" Type="datetime" />
+          <Property Name="LeavingDate" Type="datetime" />
+          <Property Name="EmployeeTag1" Type="bit" />
+          <Property Name="EmployeeTag2" Type="bit" />
+          <Property Name="AgentId" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsAgent" Type="bit" />
+          <Property Name="Rank" Type="int" />
+          <Property Name="EmployeeType1" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmployeeType2" Type="nvarchar" MaxLength="255" />
+          <Property Name="EmployeeType3" Type="nvarchar" MaxLength="255" />
+          <Property Name="Language" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address1" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address2" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="255" />
+          <Property Name="OnDutyDate" Type="datetime" />
+          <Property Name="HomePhone1" Type="nvarchar" MaxLength="255" />
+          <Property Name="HomePhone2" Type="nvarchar" MaxLength="255" />
+          <Property Name="Productivity" Type="float" />
+          <Property Name="Password" Type="nvarchar" MaxLength="255" />
+          <Property Name="CertificationId" Type="nvarchar" MaxLength="40" />
+          <Property Name="SwapGroupId" Type="uniqueidentifier" />
+          <Property Name="IsCanWorked" Type="bit" />
+          <Property Name="LaborRuleId" Type="uniqueidentifier" />
+          <Property Name="OrganizationId" Type="uniqueidentifier" />
+          <Property Name="OffDuteGroupId" Type="uniqueidentifier" />
+          <Property Name="TimeOffGroupId" Type="uniqueidentifier" />
+          <Property Name="BiddingGroupId" Type="int" />
+        </EntityType>
+        <EntityContainer Name="DBModelStoreContainer">
+          <EntitySet Name="Announcement_Org" EntityType="Self.Announcement_Org" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeId" />
+          </Key>
+          <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Name2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EnrollmentDate" Type="DateTime" Precision="3" />
+          <Property Name="LeavingDate" Type="DateTime" Precision="3" />
+          <Property Name="EmployeeTag1" Type="Boolean" />
+          <Property Name="EmployeeTag2" Type="Boolean" />
+          <Property Name="AgentId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsAgent" Type="Boolean" />
+          <Property Name="Rank" Type="Int32" />
+          <Property Name="EmployeeType1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeType2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeType3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Language" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Productivity" Type="Double" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="LaborRuleId" Type="Guid" />
+          <Property Name="OrganizationId" Type="Guid" />
+          <Property Name="CertificationId" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="OnDutyDate" Type="DateTime" Precision="3" />
+          <Property Name="HomePhone1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HomePhone2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsCanWorked" Type="Boolean" />
+          <Property Name="SwapGroupId" Type="Guid" />
+          <Property Name="OffDuteGroupId" Type="Guid" />
+          <Property Name="TimeOffGroupId" Type="Guid" />
+          <Property Name="BiddingGroupId" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Announcement_Org" EntityType="DBModel.Announcement_Org" />
+        </EntityContainer>
+        <EntityType Name="Announcement_Org">
+          <Key>
+            <PropertyRef Name="AnnounceId" />
+          </Key>
+          <Property Name="AnnounceId" Type="Guid" Nullable="false" />
+          <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Poster" Type="String" Nullable="false" MaxLength="510" FixedLength="false" Unicode="true" />
+          <Property Name="PosterId" Type="Guid" />
+          <Property Name="ReceiverOrgId" Type="Guid" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ContentText" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Tag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Priority" Type="Boolean" />
+          <Property Name="AnnounceTimeStart" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AnnounceTimeEnd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ContentType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="DBEntities">
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="DBModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Name2" ColumnName="Name2" />
+                <ScalarProperty Name="EnrollmentDate" ColumnName="EnrollmentDate" />
+                <ScalarProperty Name="LeavingDate" ColumnName="LeavingDate" />
+                <ScalarProperty Name="EmployeeTag1" ColumnName="EmployeeTag1" />
+                <ScalarProperty Name="EmployeeTag2" ColumnName="EmployeeTag2" />
+                <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+                <ScalarProperty Name="IsAgent" ColumnName="IsAgent" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="EmployeeType1" ColumnName="EmployeeType1" />
+                <ScalarProperty Name="EmployeeType2" ColumnName="EmployeeType2" />
+                <ScalarProperty Name="EmployeeType3" ColumnName="EmployeeType3" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Productivity" ColumnName="Productivity" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="LaborRuleId" ColumnName="LaborRuleId" />
+                <ScalarProperty Name="OrganizationId" ColumnName="OrganizationId" />
+                <ScalarProperty Name="CertificationId" ColumnName="CertificationId" />
+                <ScalarProperty Name="OnDutyDate" ColumnName="OnDutyDate" />
+                <ScalarProperty Name="HomePhone1" ColumnName="HomePhone1" />
+                <ScalarProperty Name="HomePhone2" ColumnName="HomePhone2" />
+                <ScalarProperty Name="IsCanWorked" ColumnName="IsCanWorked" />
+                <ScalarProperty Name="SwapGroupId" ColumnName="SwapGroupId" />
+                <ScalarProperty Name="OffDuteGroupId" ColumnName="OffDuteGroupId" />
+                <ScalarProperty Name="TimeOffGroupId" ColumnName="TimeOffGroupId" />
+                <ScalarProperty Name="BiddingGroupId" ColumnName="BiddingGroupId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Announcement_Org">
+            <EntityTypeMapping TypeName="DBModel.Announcement_Org">
+              <MappingFragment StoreEntitySet="Announcement_Org">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+                <ScalarProperty Name="AnnounceTimeEnd" ColumnName="AnnounceTimeEnd" />
+                <ScalarProperty Name="AnnounceTimeStart" ColumnName="AnnounceTimeStart" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ContentText" ColumnName="ContentText" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ReceiverOrgId" ColumnName="ReceiverOrgId" />
+                <ScalarProperty Name="PosterId" ColumnName="PosterId" />
+                <ScalarProperty Name="Poster" ColumnName="Poster" />
+                <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+                <ScalarProperty Name="AnnounceId" ColumnName="AnnounceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

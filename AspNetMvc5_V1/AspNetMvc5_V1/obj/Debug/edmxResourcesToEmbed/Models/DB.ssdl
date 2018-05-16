@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Announcement_Org">
+    <Key>
+      <PropertyRef Name="AnnounceId" />
+    </Key>
+    <Property Name="AnnounceId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+    <Property Name="Poster" Type="nvarchar" MaxLength="510" Nullable="false" />
+    <Property Name="PosterId" Type="uniqueidentifier" />
+    <Property Name="ReceiverOrgId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContentText" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Tag" Type="nvarchar" MaxLength="50" />
+    <Property Name="Priority" Type="bit" />
+    <Property Name="AnnounceTimeStart" Type="datetime" Nullable="false" />
+    <Property Name="AnnounceTimeEnd" Type="datetime" Nullable="false" />
+    <Property Name="ContentType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Name2" Type="nvarchar" MaxLength="255" />
+    <Property Name="EnrollmentDate" Type="datetime" />
+    <Property Name="LeavingDate" Type="datetime" />
+    <Property Name="EmployeeTag1" Type="bit" />
+    <Property Name="EmployeeTag2" Type="bit" />
+    <Property Name="AgentId" Type="nvarchar" MaxLength="255" />
+    <Property Name="IsAgent" Type="bit" />
+    <Property Name="Rank" Type="int" />
+    <Property Name="EmployeeType1" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmployeeType2" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmployeeType3" Type="nvarchar" MaxLength="255" />
+    <Property Name="Language" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address1" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address2" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="255" />
+    <Property Name="OnDutyDate" Type="datetime" />
+    <Property Name="HomePhone1" Type="nvarchar" MaxLength="255" />
+    <Property Name="HomePhone2" Type="nvarchar" MaxLength="255" />
+    <Property Name="Productivity" Type="float" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="CertificationId" Type="nvarchar" MaxLength="40" />
+    <Property Name="SwapGroupId" Type="uniqueidentifier" />
+    <Property Name="IsCanWorked" Type="bit" />
+    <Property Name="LaborRuleId" Type="uniqueidentifier" />
+    <Property Name="OrganizationId" Type="uniqueidentifier" />
+    <Property Name="OffDuteGroupId" Type="uniqueidentifier" />
+    <Property Name="TimeOffGroupId" Type="uniqueidentifier" />
+    <Property Name="BiddingGroupId" Type="int" />
+  </EntityType>
+  <EntityContainer Name="DBModelStoreContainer">
+    <EntitySet Name="Announcement_Org" EntityType="Self.Announcement_Org" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

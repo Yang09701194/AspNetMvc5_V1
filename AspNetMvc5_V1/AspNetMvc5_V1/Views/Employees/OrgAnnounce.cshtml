@@ -1,0 +1,158 @@
+﻿@model IEnumerable<AspNetMvc5_V1.Models.Announcement_Org>
+
+@{
+    ViewBag.Title = "OrgAnnounce";
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" type="text/css" href="~/Content/OrgAnnounce.css" />
+    <title></title>
+</head>
+<body style="font-size: 20px">
+
+
+    <div class="grid-container">
+        <div class="item1">
+            <div class="AnnounceTitle">組織公告</div>
+            <div style="width: 50%;">
+                <table id="keywords" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>標籤</th>
+                            <th>標題</th>
+                            <th>發布日期</th>
+                            <th>類型</th>
+                            <th>發布者</th>
+                            @*<th></th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Tag)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PostTime)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Type)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Poster)</td>
+                                @*<td>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.EmployeeId }) |
+                                        @Html.ActionLink("Details", "Details", new { id = item.EmployeeId }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeId })
+                                    </td>*@
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div class="item2">
+            <div class="AnnounceTitle">班務公告</div>
+            <div style="width: 50%;">
+                <table id="keywords" cellspacing="0" cellpadding="0">
+                    <thead>
+                    <tr>
+                        <th>標籤</th>
+                        <th>標題</th>
+                        <th>發布日期</th>
+                        <th>類型</th>
+                        <th>發布者</th>
+                        @*<th></th>*@
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Tag)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                            <td>@Html.DisplayFor(modelItem => item.PostTime)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Type)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Poster)</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+        <div class="item3">
+            <div class="AnnounceTitle">個人通告</div>
+            <div style="width: 50%;">
+                <table id="keywords" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>標籤</th>
+                            <th>標題</th>
+                            <th>發布日期</th>
+                            <th>類型</th>
+                            <th>發布者</th>
+                            @*<th></th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Tag)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PostTime)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Type)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Poster)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+        <div class="item4">
+            <div class="AnnounceTitle">出缺勤公告</div>
+            <div style="width: 50%;">
+                <table id="keywords" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>標籤</th>
+                            <th>標題</th>
+                            <th>發布日期</th>
+                            <th>類型</th>
+                            <th>發布者</th>
+                            @*<th></th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Tag)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PostTime)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Type)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Poster)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>

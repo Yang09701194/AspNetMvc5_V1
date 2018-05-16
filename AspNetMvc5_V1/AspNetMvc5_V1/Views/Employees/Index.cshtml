@@ -1,0 +1,207 @@
+﻿@model IEnumerable<AspNetMvc5_V1.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnrollmentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeavingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeTag1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeTag2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAgent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rank)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeType1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeType2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeType3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Language)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Productivity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LaborRuleId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrganizationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CertificationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OnDutyDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePhone1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePhone2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsCanWorked)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SwapGroupId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OffDuteGroupId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeOffGroupId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BiddingGroupId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnrollmentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LeavingDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeTag1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeTag2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgentId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsAgent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rank)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeType1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeType2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeType3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Language)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Productivity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LaborRuleId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrganizationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CertificationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OnDutyDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhone1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhone2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsCanWorked)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SwapGroupId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OffDuteGroupId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeOffGroupId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BiddingGroupId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EmployeeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeId })
+        </td>
+    </tr>
+}
+
+</table>

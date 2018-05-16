@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Name2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EnrollmentDate" Type="DateTime" Precision="3" />
+    <Property Name="LeavingDate" Type="DateTime" Precision="3" />
+    <Property Name="EmployeeTag1" Type="Boolean" />
+    <Property Name="EmployeeTag2" Type="Boolean" />
+    <Property Name="AgentId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsAgent" Type="Boolean" />
+    <Property Name="Rank" Type="Int32" />
+    <Property Name="EmployeeType1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeType2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeType3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Productivity" Type="Double" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LaborRuleId" Type="Guid" />
+    <Property Name="OrganizationId" Type="Guid" />
+    <Property Name="CertificationId" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="OnDutyDate" Type="DateTime" Precision="3" />
+    <Property Name="HomePhone1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IsCanWorked" Type="Boolean" />
+    <Property Name="SwapGroupId" Type="Guid" />
+    <Property Name="OffDuteGroupId" Type="Guid" />
+    <Property Name="TimeOffGroupId" Type="Guid" />
+    <Property Name="BiddingGroupId" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Announcement_Org" EntityType="DBModel.Announcement_Org" />
+  </EntityContainer>
+  <EntityType Name="Announcement_Org">
+    <Key>
+      <PropertyRef Name="AnnounceId" />
+    </Key>
+    <Property Name="AnnounceId" Type="Guid" Nullable="false" />
+    <Property Name="PostTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Poster" Type="String" Nullable="false" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="PosterId" Type="Guid" />
+    <Property Name="ReceiverOrgId" Type="Guid" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContentText" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Tag" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Priority" Type="Boolean" />
+    <Property Name="AnnounceTimeStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AnnounceTimeEnd" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ContentType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+</Schema>
